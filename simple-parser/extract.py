@@ -8,14 +8,14 @@ from wordpress_xmlrpc.methods.posts import NewPost
 
 TAG_RE = re.compile(r'<[^>]+>')
 
-username = 'bloggerngalam'
-password = 'singaleptoptugu'
+username = 'usernameHere'
+password = 'passwordHere'
 wp = Client('http://wp.local/xmlrpc.php', username, password)
 
 
 def main():
     filePaths = []
-    for root, dirs, files in os.walk("bloggerngalam"):
+    for root, dirs, files in os.walk("directory"):
         for file in files:
             if file.endswith(".html"):
                 filePaths.append(os.path.join(root, file))
